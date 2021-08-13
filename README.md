@@ -1,2 +1,3 @@
 # birthday-palindrome
-Created with CodeSandbox
+
+Tell your friends if their birthday is palindrome or by how many days did they miss it !!
