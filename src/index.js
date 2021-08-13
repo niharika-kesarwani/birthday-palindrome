@@ -131,7 +131,7 @@ function buttonHandler() {
 
   for (var i = 0; i < dateList.length; i++) {
     if (checkPalindrome(date).includes(true)) {
-      data.innerHTML = "Yay! Your birthday is a palindrome!!";
+      data.innerHTML = "Yay! Your birthday is a palindrome!! :)";
       isPalindrome = true;
     }
   }
@@ -150,6 +150,7 @@ function buttonHandler() {
       "<br />It would be of the form " +
       dateFormats(nextDate)[index] +
       ". <br />You missed it by " +
+      (count > 10 ? "" : " just ") +
       count +
       (count > 1 ? " days :(" : " day :(");
   }
