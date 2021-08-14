@@ -131,26 +131,26 @@ function buttonHandler() {
 
   for (var i = 0; i < dateList.length; i++) {
     if (checkPalindrome(date).includes(true)) {
-      data.innerHTML = "Yay! Your birthday is a palindrome!! :)";
+      data.innerHTML = "<br /><br /><br/>Yay! Your birthday is a palindrome!! :)";
       isPalindrome = true;
-    }
+        }
   }
 
   if (!isPalindrome) {
     var [count, nextDate] = nextPalindromeDate(date);
     var index = checkPalindrome(nextDate).indexOf(true);
     data.innerHTML =
-      "Oh no!! <br />Next palindrome date is " +
+      "Oh no !! Your birthday is not a palindrome.. <br /><br />The next nearest palindrome date is " +
       nextDate.day +
       "/" +
       nextDate.month +
       "/" +
       nextDate.year +
       "." +
-      "<br />It would be of the form " +
+      "<br /><br />It would be of the form " +
       dateFormats(nextDate)[index] +
-      ". <br />You missed it by " +
-      (count > 10 ? "" : " just ") +
+      ". <br /><br />You missed it by " +
+      (count > 10 ? "" : "just ") +
       count +
       (count > 1 ? " days :(" : " day :(");
   }
