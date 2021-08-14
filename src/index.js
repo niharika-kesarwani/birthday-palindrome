@@ -110,7 +110,7 @@ function nextPalindromeDate(date) {
   }
 }
 
-var dateInput = document.querySelector("#dateInput");
+var dateInput = document.querySelector("#date");
 var submitBtn = document.querySelector("#button");
 var data = document.querySelector("#para");
 
