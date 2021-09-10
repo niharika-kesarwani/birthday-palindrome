@@ -6,51 +6,40 @@ body {
   height: 25rem;
   margin-top: 4rem;
   font-family: "Meera Inimai", sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 .heading {
   text-align: center;
   font-weight: bolder;
   font-size: 3rem;
-  flex-grow: 1;
 }
 
 .info {
   margin: 3rem;
-  flex-grow: 1;
 }
 
 .date {
   font-weight: bold;
   font-size: larger;
   color: brown;
-  flex-grow: 1;
 }
 
 #dateInput {
   margin: 2.25rem 0rem 1rem 0rem;
   display: block;
-  flex-grow: 1;
 }
 
 #button {
   margin: 1rem;
-  max-width: 10%;
   height: 2.5rem;
   color: blue;
   font-weight: bold;
   border-radius: 2rem;
-  flex-grow: 1;
-  margin-left: 45%;
 }
 
 #para {
   height: 7rem;
   text-align: center;
-  flex-grow: 1;
 }
 
 .footer {
