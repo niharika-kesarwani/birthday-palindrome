@@ -116,43 +116,48 @@ var data = document.querySelector("#para");
 
 function buttonHandler() {
   var input = dateInput.value;
-  var dict = input.split("-");
-  var day = dict[2];
-  var month = dict[1];
-  var year = dict[0];
-  var date = {
-    day: Number(day),
-    month: Number(month),
-    year: Number(year)
-  };
+  if (input === "") {
+    data.innerHTML = "Please select a date !!";
+  } else {
+    var dict = input.split("-");
+    var day = dict[2];
+    var month = dict[1];
+    var year = dict[0];
+    var date = {
+      day: Number(day),
+      month: Number(month),
+      year: Number(year)
+    };
 
-  var dateList = dateFormats(date);
-  var isPalindrome = false;
+    var dateList = dateFormats(date);
+    var isPalindrome = false;
 
-  for (var i = 0; i < dateList.length; i++) {
-    if (checkPalindrome(date).includes(true)) {
-      data.innerHTML = "<br /><br /><br/>Yay! Your birthday is a palindrome!! :)";
-      isPalindrome = true;
-        }
-  }
+    for (var i = 0; i < dateList.length; i++) {
+      if (checkPalindrome(date).includes(true)) {
+        data.innerHTML =
+          "<br /><br /><br/>Yay! Your birthday is a palindrome!! :)";
+        isPalindrome = true;
+      }
+    }
 
-  if (!isPalindrome) {
-    var [count, nextDate] = nextPalindromeDate(date);
-    var index = checkPalindrome(nextDate).indexOf(true);
-    data.innerHTML =
-      "Oh no !! Your birthday is not a palindrome.. <br /><br />The next nearest palindrome date is " +
-      nextDate.day +
-      "/" +
-      nextDate.month +
-      "/" +
-      nextDate.year +
-      "." +
-      "<br /><br />It would be of the form " +
-      dateFormats(nextDate)[index] +
-      ". <br /><br />You missed it by " +
-      (count > 10 ? "" : "just ") +
-      count +
-      (count > 1 ? " days :(" : " day :(");
+    if (!isPalindrome) {
+      var [count, nextDate] = nextPalindromeDate(date);
+      var index = checkPalindrome(nextDate).indexOf(true);
+      data.innerHTML =
+        "Oh no !! Your birthday is not a palindrome.. <br /><br />The next nearest palindrome date is " +
+        nextDate.day +
+        "/" +
+        nextDate.month +
+        "/" +
+        nextDate.year +
+        "." +
+        "<br /><br />It would be of the form " +
+        dateFormats(nextDate)[index] +
+        ". <br /><br />You missed it by " +
+        (count > 10 ? "" : "just ") +
+        count +
+        (count > 1 ? " days :(" : " day :(");
+    }
   }
 }
 

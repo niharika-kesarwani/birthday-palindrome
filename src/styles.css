@@ -1,50 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap");
 
 body {
   background-color: palevioletred;
   text-align: center;
   height: 25rem;
   margin-top: 4rem;
-  font-family: 'Meera Inimai', sans-serif;;
+  font-family: "Meera Inimai", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.heading{
+.heading {
   text-align: center;
   font-weight: bolder;
   font-size: 3rem;
+  flex-grow: 1;
 }
 
-.info{
+.info {
   margin: 3rem;
+  flex-grow: 1;
 }
 
-.date{
+.date {
   font-weight: bold;
   font-size: larger;
-  color:brown
+  color: brown;
+  flex-grow: 1;
 }
 
-#dateInput{
+#dateInput {
   margin: 2.25rem 0rem 1rem 0rem;
   display: block;
+  flex-grow: 1;
 }
 
-#button{
+#button {
   margin: 1rem;
-  width: 7rem;
+  max-width: 10%;
   height: 2.5rem;
   color: blue;
   font-weight: bold;
   border-radius: 2rem;
+  flex-grow: 1;
+  margin-left: 45%;
 }
 
-#para{
+#para {
   height: 7rem;
   text-align: center;
+  flex-grow: 1;
 }
 
-.footer{
-  background-color:blanchedalmond;
+.footer {
+  background-color: blanchedalmond;
   margin-top: 2rem;
   padding: 2rem 0rem 1.4rem 0rem;
   border-top-right-radius: 1rem;
@@ -53,21 +63,21 @@ body {
   color: green;
 }
 
-.footer-header{
+.footer-header {
   font-weight: bolder;
   font-size: x-large;
 }
 
-.footer-ul-links{
+.footer-ul-links {
   padding-left: 0px;
 }
 
-.lists-item-inline{
+.lists-item-inline {
   display: inline;
   padding: 0rem 0.5rem;
 }
 
-.footer-links{
+.footer-links {
   color: black;
   text-decoration: none;
   padding-left: 0px;
